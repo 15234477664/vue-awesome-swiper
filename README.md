@@ -1,13 +1,9 @@
 # vue-awesome-swiper(vue-awesome-swiper 的安装和使用)
 # 示例
 
-[Demo Page](https://surmon-china.github.io/vue-awesome-swiper)
+[Demo](https://surmon-china.github.io/vue-awesome-swiper)
 
-[CDN Example](https://jsfiddle.net/bL983fjt/)
-
-[mobile fullpage example code](https://github.com/surmon-china/vue-awesome-swiper/blob/master/examples/44-mobile-fullpage-example.vue)
-
-[nuxt.js/ssr example code](https://github.com/surmon-china/vue-awesome-swiper/blob/master/examples/nuxt-ssr-example)
+[移动端](https://github.com/surmon-china/vue-awesome-swiper/blob/master/examples/44-mobile-fullpage-example.vue)
 
 
 # Install
