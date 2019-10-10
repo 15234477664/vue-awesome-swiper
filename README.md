@@ -1,2 +1,1 @@
-# vue-awesome-swiper
-vue-awesome-swiper 的安装和使用
+# vue-awesome-swiper(vue-awesome-swiper 的安装和使用)
