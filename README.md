@@ -6,38 +6,50 @@
 [移动端](https://github.com/surmon-china/vue-awesome-swiper/blob/master/examples/44-mobile-fullpage-example.vue)
 
 
-# Install
-
-#### CDN
-
-``` html
-<link rel="stylesheet" href="path/to/swiper/dist/css/swiper.css"/>
-<script type="text/javascript" src="path/to/swiper.js"></script>
-<script type="text/javascript" src="path/to/vue.min.js"></script>
-<script type="text/javascript" src="path/to/dist/vue-awesome-swiper.js"></script>
-<script type="text/javascript">
-  Vue.use(window.VueAwesomeSwiper)
-</script>
-```
-
-#### NPM
+# 使用方法
 
 ``` bash
 npm install vue-awesome-swiper --save
 ```
-
-### Mount
-
-#### mount with global
-
 ``` javascript
-import Vue from 'vue'
+/*全局引入*/
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-
-// require styles
-import 'swiper/dist/css/swiper.css'
-
+import 'swiper/dist/css/swiper.css'//这里注意具体看使用的版本是否需要引入样式，以及具体位置。
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
+```
+## 组件方式引用
+```html
+<swiper :options="swiperOption">
+    <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
+    <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
+    <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
+    <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
+    <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
+    <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
+</swiper>
+ <!--以下看需要添加-->
+<div class="swiper-scrollbar"></div> //滚动条
+<div class="swiper-button-next"></div> //下一项
+<div class="swiper-button-prev"></div> //上一项
+<div class="swiper-pagination"></div> //标页码
+```
+```js
+import 'swiper/dist/css/swiper.css'////这里注意具体看使用的版本是否需要引入样式，以及具体位置。
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+data() {
+    return {
+      swiperOption: {
+        notNextTick: true,
+        autoplay: true,
+        speed: 1000,
+        loop: true
+      },
+    };
+  },
+ components: {   //
+    swiper,
+    swiperSlide
+  },
 ```
 
 #### mount with component
