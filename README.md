@@ -52,7 +52,9 @@ data() {
   },
 ```
 ## 用vue-awesome-swiper实现轮播图, 点击事件不生效
+在最新的swiper中，swiper绑定的事件中，是通过this指向当前swiper对象的。而在事件回调中，我们需要获取vue页面data中的数据。但是此时的this并不指向vue对象。
 解决:
+html
 ```html
 <swiper :options="swiperOption" ref="mySwiper">
     <swiper-slide v-if="imgList.length>0" v-for="(item,index) in imgList" :key='index'>
@@ -60,6 +62,7 @@ data() {
     </swiper-slide>
 </swiper>
 ```
+js
 ```js
 data() {
     return {
